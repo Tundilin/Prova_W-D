@@ -1,0 +1,260 @@
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sito Immobiliare Italiano">
+	<meta name="keywords" content="Case, Immobili, Affitto, Italia, Immobiliare">
+    <meta name="author" content="Bilio Immo">
+    <link rel="icon" href="immagini/Favicon.png">
+
+    <title>immobilio! • Immobiliari Italiani</title>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<link href="css/hamburgers.css" rel="stylesheet">
+	
+	<link href="css/miocss.css" rel="stylesheet">
+	
+  </head>
+
+  <body>
+  
+    <header>
+      <nav class="header-fisso">
+		<div class="contenitore" id="header">
+			<div id="marchio">
+				<a href="#">
+					<img src="immagini/Marchio.png" width="200px" alt="immobilio!">
+				</a>
+			</div>
+			<div id="menu">
+				<a class="voce-menu" id="attiva" href="Affitto">In Affitto</a>
+				<a class="voce-menu" href="Vendita">In Vendita</a>
+				<a class="voce-menu" href="Aggiungi">Pubblica</a>
+				<a class="voce-menu" href="Contatti">Contatti</a>
+			</div>
+			<button class="hamburger hamburger--squeeze" type="button">
+				<span class="hamburger-box">
+				<span class="hamburger-inner">
+				</span>
+				</span>
+				<div id="contenuto-hamburger">
+					<a href="#">In Affitto</a>
+					<a href="#">In Vendita</a>
+					<a href="#">Pubblica</a>
+					<a href="#">Contatti</a>
+				</div>
+
+			</button>
+			<script>
+				// Look for .hamburger
+				var hamburger = document.querySelector(".hamburger");
+				// On click
+				hamburger.addEventListener("click", function() {
+				// Toggle class "is-active"
+				hamburger.classList.toggle("is-active");
+				// Do something else, like open/close menu
+				var x=document.getElementById("contenuto-hamburger");
+				if (x.style.display === "block"){
+					x.style.display = "none";
+					} else {
+						x.style.display = "block";
+					}
+				});
+			</script>
+		</div>
+      </nav>
+    </header>
+
+    <content>
+      <section class="carosello">
+        <div class="contenitore" id="carosello" >
+			<div id="testo-regione">
+				<h1 class="jumbotron-heading">Affitto in Emilia Romagna</h1>
+				<p>In questa regione sono disponibili 123 case in affitto.</p>
+				<p>
+					<a href="#" class="btn btn-primary my-2">Cambia regione</a>
+				</p>				
+			</div>
+			<div id="immagine-regione">
+				<img src="immagini/EmiliaRomagna.png" alt="Image">				
+			</div>
+        </div>
+      </section>
+
+      <section class="colonna-immobili">
+        <div class="contenitore" id="content">
+			<div class="barra-cerca">
+				<div class="ordina">
+					<h5>Ordina per</h5>
+					<div class="menu-discesa">
+						<button class="bottone-discesa">Nome</button>
+							<div class="contenuto-menu-discesa">
+								<a href="#">Prezzo</a>
+								<a href="#">Data inserimento</a>
+								<a href="#">Nome (discendente)</a>
+							</div>
+					</div>
+				</div>
+				<div class="range-prezzo">
+					<h5>Prezzo:&nbsp&nbsp&nbsp <input type="number" min="10" max="1000" value="1000" id="input-number"></input>€</h5>
+					<input type="range" min="10" max="1000" value="1000" id="input-slider">
+					<script>
+						var slideCol = document.getElementById("input-number");
+						var y = document.getElementById("input-slider");
+						y.innerHTML = slideCol.value;
+
+						slideCol.oninput = function() {
+							y.innerHTML = this.value;
+						}						
+					</script>
+				</div>
+				<div>
+					<input type="text" id="input-cerca" onkeyup="" placeholder="Cerca..">
+				</div>
+		</div>
+		
+			<div class="row">
+            <div class="colonna">
+              <div class="card mb-4 box-shadow">
+			  	<div id="slider1" class="slider">
+					<img class="card-img-top" src="immagini/1.jpg" alt="Casa a Ravenna">
+					<img class="card-img-top" src="immagini/2.jpg" alt="Casa a Ravenna" style="display: none">
+					<div class="info">
+						<h5>MQ</h5>
+						<p>123</p>
+						<h5>Locali</h5>
+						<p>5</p>
+						<h4>Costo</h4>
+						<h6>400€/mese</h6>
+					</div>
+					<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+						<div class="w3-left w3-hover-text-khaki" onclick="plusDivs('slider1', -1)">&#10094;</div>
+						<div class="w3-right w3-hover-text-khaki" onclick="plusDivs('slider1', 1)">&#10095;</div>
+					</div>
+				</div>
+                <div class="card-body">
+					<h4>Bellissima casa con giardino a Ravenna</h4>
+                  <p class="card-text">Affittasi bellissima abitazione di mq 123 con 5 locali a prezzo contenuto.</p>
+                  <div class="d-flex justify-content-between align-items-center" id="bottom">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Ulteriori dettagli</button>
+                    </div>
+                    <small class="text-muted">Ravenna, Via O. Gardella 12</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
+                        <div class="colonna">
+              <div class="card mb-4 box-shadow">
+			  	<div id="slider2" class="slider">
+					<img class="card-img-top" src="immagini/3.jpg" alt="Casa a Ravenna">
+					<img class="card-img-top" src="immagini/4.jpg" alt="Casa a Ravenna" style="display: none">
+					<div class="info">
+						<h5>MQ</h5>
+						<p>123</p>
+						<h5>Locali</h5>
+						<p>5</p>
+						<h4>Costo</h4>
+						<h6>400€/mese</h6>
+					</div>
+					<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+						<div class="w3-left w3-hover-text-khaki" onclick="plusDivs('slider2', -1)">&#10094;</div>
+						<div class="w3-right w3-hover-text-khaki" onclick="plusDivs('slider2', 1)">&#10095;</div>
+					</div>
+				</div>
+                <div class="card-body">
+					<h4>Bellissima casa con giardino a Ravenna</h4>
+                  <p class="card-text">Affittasi bellissima abitazione di mq 123 con 5 locali a prezzo contenuto.</p>
+                  <div class="d-flex justify-content-between align-items-center" id="bottom">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Ulteriori dettagli</button>
+                    </div>
+                    <small class="text-muted">Ravenna, Via O. Gardella 12</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
+            <div class="colonna">
+              <div class="card mb-4 box-shadow">
+			  	<div id="slider3" class="slider">
+					<img class="card-img-top" src="immagini/5.jpg" alt="Casa a Ravenna">
+					<img class="card-img-top" src="immagini/1.jpg" alt="Casa a Ravenna" style="display: none">
+					<div class="info">
+						<h5>MQ</h5>
+						<p>123</p>
+						<h5>Locali</h5>
+						<p>5</p>
+						<h4>Costo</h4>
+						<h6>400€/mese</h6>
+					</div>
+					<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+						<div class="w3-left w3-hover-text-khaki" onclick="plusDivs('slider3', -1)">&#10094;</div>
+						<div class="w3-right w3-hover-text-khaki" onclick="plusDivs('slider3', 1)">&#10095;</div>
+					</div>
+				</div>
+                <div class="card-body">
+					<h4>Bellissima casa con giardino a Ravenna</h4>
+                  <p class="card-text">Affittasi bellissima abitazione di mq 123 con 5 locali a prezzo contenuto.</p>
+                  <div class="d-flex justify-content-between align-items-center" id="bottom">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Ulteriori dettagli</button>
+                    </div>
+                    <small class="text-muted">Ravenna, Via O. Gardella 12</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+
+    </content>
+
+    <footer>
+		<div class="row">
+			<div class="col-sm-12 col-lg-6" id="sitemap">
+				<div class="immagine-footer">
+					<img src="immagini/Sitemap.png" alt="Sitemap">
+				</div>
+				<div>
+				<ul><h5>Sitemap</h5>
+					<li>◼ &nbspLanding</li>
+					<li>◼ &nbspIn Affitto</li>
+					<li>◼ &nbspIn Vendita</li>
+					<li>◼ &nbspPubblica</li>
+					<li>◼ &nbspContatti</li>
+				</ul>
+				</div>
+			</div>
+			<div class="col-sm-12 col-lg-6" id="contatti">
+				<div class="immagine-footer">
+				<img class="immagine-footer" src="immagini/Contatti.png" alt="Contatti">
+				</div>
+				<div>
+
+				<ul><h5>Contatti</h5>
+					<li><img class="immagine-footer" src="immagini/Telefono.png" alt="Telefono: ">3383994269</li>
+					<li><img class="immagine-footer" src="immagini/Mail.png" alt="Mail: ">crosa.francesco@gmail.com</li>
+					<li><img class="immagine-footer" src="immagini/Facebook.png" alt="Facebook: ">www.facebook.com/immobilio</li>
+					<li><img class="immagine-footer" src="immagini/Instagram.png" alt="Instagram: ">www.instagram.com/immobilio</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<p>Sito a cura del Signor Bilio Immo</p>
+    </footer>
+
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/MioJs.js"></script>
+	
+
+  </body>
+</html>
